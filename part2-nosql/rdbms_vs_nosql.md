@@ -1,0 +1,9 @@
+For building a patient management system for a healthcare startup it is ideal to use MySQL as the database. This is because healthcare systems need to make sure data is accurate, reliable and consistent and MySQL guarantees this with its ACID properties. Patient records, prescriptions, billing and medical histories are very sensitive. Must be accurate and consistent all the time. Even a small mistake could lead to medical or legal problems.
+
+From a CAP theorem point of view such systems focus on Consistency and Partition Tolerance. When many users update patient records at the time it is crucial that all users see the same correct data. MySQL has rules for data storage ensuring that data is structured and validated which is vital in healthcare.
+
+On the hand MongoDB follows BASE properties, which gives strong consistency for scalability and flexibility. Which is helpful for applications with changing or unstructured data it is not suitable for healthcare systems where consistency is a must.
+
+However if your system also needs a fraud detection module the recommendation can change. Fraud detection often involves analyzing amounts of semi-structured or streaming data, where MongoDB or other NoSQL databases are more suitable due to their scalability and flexible design.
+
+Therefore a hybrid approach would be ideal: use MySQL for data and MongoDB, for analytics or fraud detection. This way you can use the strengths of both systems while keeping data integrity where it matters most. MySQL database and MongoDB database will both play roles. The MySQL database will handle data while the MongoDB database will handle analytics and fraud detection.
